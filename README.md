@@ -29,3 +29,27 @@ forked from here: http://joaocorreia.pt/google-analytics-scripts/google-analytic
 
 
 ```
+
+
+## Pro Tip - Testing this on localhost
+
+Sounds easy, and in the end it is.  But good luck finding out how to do this online without wasting AT LEAST 30 minutes of your life.
+
+```html
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-YYYYYYYYY-1']);
+  _gaq.push(["_setDomainName", "none"]); // <----------------------------------- ADD THIS LINE
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+```
