@@ -35,11 +35,18 @@ forked from here: http://joaocorreia.pt/google-analytics-scripts/google-analytic
 
 Sounds easy, and in the end it is.  But good luck finding out how to do this online without wasting AT LEAST 30 minutes of your life.
 
+### Follow these steps
+
+1. create an account on Google Analytics
+	- I chose NOT A WEBSITE because it won't let you enter http://localhost as the website address
+
+2. put this in your Layout file AND Replace the Y's with your ID (the key to this is the _setDomainName = none
+
 ```html
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-YYYYYYYYY-1']);
+  _gaq.push(['_setAccount', 'UA-YYYYYYYYY-1']); //<--- REPLACE WITH YOUR ID 
   _gaq.push(["_setDomainName", "none"]); // <----------------------------------- ADD THIS LINE
   _gaq.push(['_trackPageview']);
 
